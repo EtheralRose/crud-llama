@@ -1,0 +1,139 @@
+.navbar{
+    background-color: rgb(31, 31, 53);
+}
+
+.navbar #links{
+    display: flex;
+    justify-content: center; 
+}
+
+.navbar a{
+    color: white;
+    margin-left: 3%;
+}
+
+.navbar button{
+    padding: 0.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+#fondo{
+    background-image: url("/assets/LLAMALESS_ILLUS-55.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 65vh;
+}
+
+#main{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center; 
+}
+
+#main h1{
+    color: white;
+    font-size: 4rem;
+}
+
+#mainbutton{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainbutton button{
+    padding: 2%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+#info{
+    margin: 0%;
+    padding: 5%;
+    color: white;
+}
+
+#info h1{
+    font-size: 3rem;
+}
+
+#info p{
+    font-size: 1.3rem;
+}
+
+#tours{
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+#tours img{
+    width: 105%;
+    height: 105%;
+    padding-bottom: 10%;
+}
+
+#tours h2{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form{
+    background-color: rgb(28, 28, 53);
+    padding: 3%;
+    padding-top: 4%;
+    margin-right: 4%;
+    border-radius: 50px;
+}
+
+#form h4{
+    padding-bottom: 5%;
+    font-size: 1.9rem;
+}
+
+#form input{
+    color: white;
+    background-color: rgba(88, 88, 179, 0.247);
+    margin-bottom: 3%;
+}
+
+#form button{
+    padding: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#contact h4{
+    padding-top: 10%;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+#contact img{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+#foot h5{
+    color: white;
+    font-size: 1.3rem;
+}
+
+#foot h6{
+    padding-top: 2%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

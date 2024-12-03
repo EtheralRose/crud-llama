@@ -1,0 +1,59 @@
+.navbar{
+    background-color: rgb(31, 31, 53);
+}
+
+.navbar #links{
+    display: flex;
+    justify-content: center;
+    padding-right: 8%; 
+}
+
+.navbar a{
+    color: white;
+    margin-left: 3%;
+}
+
+#fondo{
+    background-image: url("/assets/LLAMALESS_ILLUS-55.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 95vh;
+}
+
+#create label{
+    padding-top: 3%;
+    color: white;
+    font-size: 13px;
+}
+
+.card-header{
+    color: white;
+    background-color: rgb(31, 31, 53);
+}
+
+.card-body{
+    background-color: rgba(31, 31, 53, 0.76);
+}
+
+.card-body input, th, td{
+    background-color: rgba(31, 31, 53, 0.432);
+    color: white;
+}
+
+.card-body span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#foot h5{
+    color: white;
+    font-size: 1.3rem;
+}
+
+#foot h6{
+    padding-top: 2%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,166 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <img src="/assets/LOGO_STARGAZING.png" alt="Logo" width="200">
+    <div id="links" class="container-fluid">
+      <a class="navbar-brand p-3" href="#">Home</a>
+      <a class="navbar-brand p-3" href="#">Tours</a>
+      <a class="navbar-brand p-3" href="#">Blogs</a>
+      <a class="navbar-brand p-3" href="#">FAQ</a>
+      <a class="navbar-brand p-3" href="#">ADObs</a>
+      <a class="navbar-brand p-3" href="#">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<div id="fondo" class="container-fluid">
+  <div class="container">
+    <div class="row text-center text-white p-5" >
+      <h1>Sistema de Reservas</h1>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div id="create" class="card">
+          <div class="card-header">
+            Crea tu Reserva
+          </div>
+
+          <div class="card-body p-4">
+            <form [formGroup]="ReservaForm">
+              <div class="col-12">
+                <label for=""></label>
+                <input type="text" class="form-control" [hidden]="true" formControlName="id" placeholder="Ingrese el ID"> 
+              </div>
+              <div class="col-12">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" formControlName="Nombre">
+                <div class="text-danger">
+                  @if (ReservaForm.controls['Nombre'].touched)
+                  {
+                    @if (ReservaForm.controls['Nombre'].errors?.['required']) 
+                      {
+                        <span>No puede dejar el nombre vacio</span>
+                      }
+                  }
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="">Tipo de Tour</label>
+                <input type="text" class="form-control" formControlName="Tour">
+                <div class="text-danger">
+                  @if (ReservaForm.controls['Tour'].touched)
+                  {
+                    @if (ReservaForm.controls['Tour'].errors?.['required']) 
+                    {
+                      <span>Debes elegir un tour</span>
+                    }
+                  }
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="">Fecha del agendamiento</label>
+                <input type="text" class="form-control mb-4" formControlName="Fecha">
+                <div class="text-danger">
+                  @if (ReservaForm.controls['Fecha'].touched)
+                  {
+                    @if (ReservaForm.controls['Fecha'].errors?.['required']) 
+                    {
+                      <span>Debes agregar una fecha</span>
+                    }
+                  }
+                </div>
+              </div>
+              
+              <div class="row pt-3">
+                <div class="col-6 text-center">
+                  <button class="btn btn-secondary" (click)="limpiar()">Vaciar</button>
+                </div>
+                <div class="col-6 text-center">
+                  @if(ReservaForm.controls['ID'].value==1)
+                  {
+                  <button class="btn btn-success" [disabled]="ReservaForm.invalid" (click)="onSave()">Agendar</button>
+                  }
+                  @else
+                  {
+                  <button class="btn btn-warning" [disabled]="ReservaForm.invalid" (click)="onUpdate()">Actualizar</button>
+                  }
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+      <div class="col-7">
+        <div class="card">
+          <div class="card-header">
+            <h6>Reservas</h6>
+          </div>
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-12 ">
+                <table class="table table-bordered ">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nombre</th>
+                      <th>Tipo de Tour</th>
+                      <th>Fecha</th>
+                      <th>Accion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for (item of ReservaList; track $index) {
+                      <tr>
+                        <td>{{$index}}</td>
+                        <td>{{item.Nombre}}</td>
+                        <td>{{item.Tour}}</td>
+                        <td>{{item.Fecha}}</td>
+                        <td>
+                          <button class="btn btn-primary" (click)="onEdit(item)">Editar</button>
+                          <button class="btn btn-danger mx-2" (click)="onDelete(item.ID)">Eliminar</button>
+                        </td>
+                      </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<nav id="foot" class="navbar navbar-expand-lg">
+  <div class="container-fluid p-5">
+    <div id="apoyo" class="container">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+          <h5 class="p-4">APOYADO POR</h5>
+        </div>
+        <div class="col-sm-2">
+          <img class="w-75" src="\assets\support\Corfo-Antofagasta.png" alt="">
+        </div>
+        <div class="col-sm-2">
+          <img class="w-75" src="\assets\support\Logos-GORE-y-ERI-BN.png" alt="">
+        </div>
+        <div class="col-sm-2">
+          <img class="w-75" src="\assets\support\Logos-ERI-BN-1.png" alt="">
+        </div>
+        <div class="col-sm-2">
+          <img class="w-50" src="\assets\support\Consejo-Regional.png" alt="">
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <h6>Llama Stargazing 2024 C - Todos los derechos reservados. Desarrollado por Mi, Carlos mejor conocido como Ethereal Rose</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
